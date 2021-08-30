@@ -1,0 +1,34 @@
+{
+	"name": "DSParquetIngestDataTest",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DataLakeStorageParquetFiles",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"pDs_filename": {
+				"type": "string",
+				"defaultValue": null
+			}
+		},
+		"folder": {
+			"name": "Bedivar/Trip"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().pDs_filename",
+					"type": "Expression"
+				},
+				"folderPath": "rawfiles/IngestData/Test",
+				"fileSystem": "bedivar"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

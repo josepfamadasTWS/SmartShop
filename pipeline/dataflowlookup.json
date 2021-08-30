@@ -1,0 +1,37 @@
+{
+	"name": "dataflowlookup",
+	"properties": {
+		"activities": [
+			{
+				"name": "dataflowDemo_lookup",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "dataflowDemo_lookup",
+						"type": "DataFlowReference"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"folder": {
+			"name": "tutorial"
+		},
+		"annotations": [],
+		"lastPublishTime": "2021-08-30T08:05:45Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

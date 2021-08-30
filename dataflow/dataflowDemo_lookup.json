@@ -1,0 +1,68 @@
+{
+	"name": "dataflowDemo_lookup",
+	"properties": {
+		"folder": {
+			"name": "Tutorial"
+		},
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "dsDataLakeSales",
+						"type": "DatasetReference"
+					},
+					"name": "Datalake"
+				},
+				{
+					"dataset": {
+						"referenceName": "SqlTableCustomerData",
+						"type": "DatasetReference"
+					},
+					"name": "LookupStream"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "SQLDatabseDatset",
+						"type": "DatasetReference"
+					},
+					"name": "SQLDatabaseDestinationSink"
+				},
+				{
+					"dataset": {
+						"referenceName": "SalesData_Streams2",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				},
+				{
+					"dataset": {
+						"referenceName": "SalesData_Default",
+						"type": "DatasetReference"
+					},
+					"name": "sink2"
+				}
+			],
+			"transformations": [
+				{
+					"name": "ConditionalSplit1"
+				},
+				{
+					"name": "Lookup"
+				},
+				{
+					"name": "DerivedColumn1"
+				},
+				{
+					"name": "Select1"
+				},
+				{
+					"name": "Filter1"
+				}
+			],
+			"script": "source(output(\n\t\tInvoiceNo as string,\n\t\tStockCode as string,\n\t\tDescription as string,\n\t\tQuantity as integer,\n\t\tInvoiceDate as timestamp 'MM-dd-yyyy HH:mm',\n\t\tUnitPrice as float,\n\t\tCustomerID as integer,\n\t\tCountry as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tdateFormats: ['MM/dd/yyyy'],\n\tpreferredIntegralType: 'integer',\n\tpreferredFractionalType: 'float') ~> Datalake\nsource(output(\n\t\tCID as integer,\n\t\tName as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> LookupStream\nDerivedColumn1 split(UnitPrice>1 && UnitPrice<3,\n\tUnitPrice> 3 && UnitPrice < 4,\n\tdisjoint: false) ~> ConditionalSplit1@(strem1, strem2, DefaultStream)\nDatalake, LookupStream lookup(CustomerID == CID,\n\tmultiple: false,\n\tpickup: 'any',\n\tbroadcast: 'auto')~> Lookup\nSelect1 derive(CustomerName = Name) ~> DerivedColumn1\nFilter1 select(mapColumn(\n\t\tStockCode_new = StockCode,\n\t\tDescription,\n\t\tQuantity,\n\t\tInvoiceDate,\n\t\tUnitPrice,\n\t\tCustomerID,\n\t\tCountry,\n\t\tCID,\n\t\tName\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> Select1\nLookup filter(Quantity>4) ~> Filter1\nConditionalSplit1@strem1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tinput(\n\t\tInvoiceNo as string,\n\t\tStockCode as string,\n\t\tDescription as string,\n\t\tQuantity as integer,\n\t\tInvoiceDate as date,\n\t\tUnitPrice as double,\n\t\tCustomerID as integer,\n\t\tCountry as string\n\t),\n\tdeletable:false,\n\tinsertable:true,\n\tupdateable:false,\n\tupsertable:false,\n\trecreate:true,\n\tformat: 'table',\n\terrorHandlingOption: 'stopOnFirstError') ~> SQLDatabaseDestinationSink\nConditionalSplit1@strem2 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tinput(\n\t\tInvoiceNo as string,\n\t\tStockCode as string,\n\t\tDescription as string,\n\t\tQuantity as integer,\n\t\tInvoiceDate as date,\n\t\tUnitPrice as double,\n\t\tCustomerID as integer,\n\t\tCountry as string\n\t),\n\tdeletable:false,\n\tinsertable:true,\n\tupdateable:false,\n\tupsertable:false,\n\trecreate:true,\n\tformat: 'table',\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true,\n\terrorHandlingOption: 'stopOnFirstError') ~> sink1\nConditionalSplit1@DefaultStream sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tinput(\n\t\tInvoiceNo as string,\n\t\tStockCode as string,\n\t\tDescription as string,\n\t\tQuantity as integer,\n\t\tInvoiceDate as date,\n\t\tUnitPrice as double,\n\t\tCustomerID as integer,\n\t\tCountry as string\n\t),\n\tdeletable:false,\n\tinsertable:true,\n\tupdateable:false,\n\tupsertable:false,\n\trecreate:true,\n\tformat: 'table',\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true,\n\terrorHandlingOption: 'stopOnFirstError') ~> sink2"
+		}
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"name": "SqlTableCustomerData",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseSourceDB",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "CID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Name",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Customer-data"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

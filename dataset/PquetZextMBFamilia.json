@@ -1,0 +1,146 @@
+{
+	"name": "PquetZextMBFamilia",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DataLakeStorageParquetFiles",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Bedivar/SourcesDataLake"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "ZEXT_MB_FAMILIA",
+				"folderPath": "rawfiles/IngestData/ERP",
+				"fileSystem": "bedivar"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "COD_FAMILIA",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESCRICAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "MARGEM1",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MARGEM2",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MARGEM3",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MARGEM4",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MARGEM5",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MARGEM6",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "IMAGEM",
+				"type": "BINARY"
+			},
+			{
+				"name": "E_SERVICO",
+				"type": "UTF8"
+			},
+			{
+				"name": "FACT_ANALISE",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "COMISSIONAVEL",
+				"type": "UTF8"
+			},
+			{
+				"name": "DATA_REVISAO",
+				"type": "INT96"
+			},
+			{
+				"name": "NUM_REVISAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "TABELA_REVISAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "LOCK_USER",
+				"type": "UTF8"
+			},
+			{
+				"name": "COR_POS",
+				"type": "UTF8"
+			},
+			{
+				"name": "ARMAZEM",
+				"type": "UTF8"
+			},
+			{
+				"name": "MARGEM_MINIMA_VENDAS",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "PORTALWEB",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_POC",
+				"type": "UTF8"
+			},
+			{
+				"name": "REFERENCIA_PROD",
+				"type": "UTF8"
+			},
+			{
+				"name": "NUMERACAO_PROD",
+				"type": "UTF8"
+			},
+			{
+				"name": "XPRESSCAD",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_AREA_NEGOCIO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CATEGORIA",
+				"type": "UTF8"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

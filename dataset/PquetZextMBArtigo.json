@@ -1,0 +1,232 @@
+{
+	"name": "PquetZextMBArtigo",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DataLakeStorageParquetFiles",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Bedivar/SourcesDataLake"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "ZEXT_MB_ARTIGOS",
+				"folderPath": "rawfiles/IngestData/ERP",
+				"fileSystem": "bedivar"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "CODIGO_ARM",
+				"type": "UTF8"
+			},
+			{
+				"name": "REFERENCIA",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_MARCA",
+				"type": "UTF8"
+			},
+			{
+				"name": "MERC_COD",
+				"type": "UTF8"
+			},
+			{
+				"name": "IVA_TAXA",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_FAMILIA",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_UNIDADE",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_TIPO_ART",
+				"type": "UTF8"
+			},
+			{
+				"name": "REF_EQUIVAL",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESIGNACAO1",
+				"type": "UTF8"
+			},
+			{
+				"name": "PRECO1",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "PRECO2",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "PRECO3",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "PRECO4",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "PRECO5",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "PRECO_CUSTO",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "CUSTO_MEDIO",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "ULTIMO_CUSTO",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "STOCK_MINIMO",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "STOCK_MAXIMO",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "TEMPO_ENTREGA",
+				"type": "UTF8"
+			},
+			{
+				"name": "PERIODO_ENC",
+				"type": "UTF8"
+			},
+			{
+				"name": "STOCK_ACTUAL",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "STOCK_ACTUAL2",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "STOCK_INICIAL",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "QTD_ENC_CLIENTE",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "QTD_ENC_CLIENTE2",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "QTD_ENC_FORN",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "QTD_ENC_FORN2",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "DT_ULT_COMPRA",
+				"type": "INT96"
+			},
+			{
+				"name": "MOV_STOCKS",
+				"type": "UTF8"
+			},
+			{
+				"name": "ARM_REF",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_GRUPO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DT_ULT_VENDA",
+				"type": "INT96"
+			},
+			{
+				"name": "DT_ABERTURA",
+				"type": "INT96"
+			},
+			{
+				"name": "ABSOLETO",
+				"type": "UTF8"
+			},
+			{
+				"name": "STOCK_NEGATIVO",
+				"type": "UTF8"
+			},
+			{
+				"name": "ISENTO_DESCFINANC",
+				"type": "UTF8"
+			},
+			{
+				"name": "ISENTO_DESCCOMER",
+				"type": "UTF8"
+			},
+			{
+				"name": "CPA_SEGUNDA_UNIDADE",
+				"type": "UTF8"
+			},
+			{
+				"name": "ULT_DATAPRECO",
+				"type": "INT96"
+			},
+			{
+				"name": "COD_SECCAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "ARTIGO_VIRTUAL",
+				"type": "UTF8"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

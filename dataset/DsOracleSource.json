@@ -1,0 +1,29 @@
+{
+	"name": "DsOracleSource",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "OracleOnPremis",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"cw_tablename": {
+				"type": "string",
+				"defaultValue": "ZEXT_DS_ARMAZEM"
+			}
+		},
+		"folder": {
+			"name": "Bedivar/Trip"
+		},
+		"annotations": [],
+		"type": "OracleTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "BEDIVAR",
+			"table": {
+				"value": "@dataset().cw_tablename",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

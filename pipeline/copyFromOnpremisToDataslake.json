@@ -1,0 +1,682 @@
+{
+	"name": "copyFromOnpremisToDataslake",
+	"properties": {
+		"description": "CopyFromOnpremisOratoDatalake",
+		"activities": [
+			{
+				"name": "ForEach_h68",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.cw_items",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "Copy_h68",
+							"type": "Copy",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "7.00:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [
+								{
+									"name": "Source",
+									"value": "BEDIVAR.@{item().source.table}"
+								},
+								{
+									"name": "Destination",
+									"value": "inputsfiles/Bedivar/@{item().destination.fileName}"
+								}
+							],
+							"typeProperties": {
+								"source": {
+									"type": "OracleSource",
+									"partitionOption": "None"
+								},
+								"sink": {
+									"type": "ParquetSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									}
+								},
+								"enableStaging": false,
+								"parallelCopies": 5,
+								"enableSkipIncompatibleRow": true,
+								"validateDataConsistency": false,
+								"logStorageSettings": {
+									"linkedServiceName": {
+										"referenceName": "DataLakeStorageParquetFiles",
+										"type": "LinkedServiceReference"
+									},
+									"path": "inputsfiles"
+								}
+							},
+							"inputs": [
+								{
+									"referenceName": "SourceDataset_h68",
+									"type": "DatasetReference",
+									"parameters": {
+										"cw_table": {
+											"value": "@pipeline().parameters.cw_items",
+											"type": "Expression"
+										}
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "DestinationDataset_h68",
+									"type": "DatasetReference",
+									"parameters": {
+										"cw_fileName": "@item().destination.fileName"
+									}
+								}
+							]
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"cw_items": {
+				"type": "Array",
+				"defaultValue": [
+					{
+						"source": {
+							"table": "ZEXT_BDA_ARMAZEM"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_BDA_ARMAZEM.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_BDA_ARTIGO"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_BDA_ARTIGO.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_BDA_ARTIGOS_DETALHE"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_BDA_ARTIGOS_DETALHE.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_BDA_DEPARTAMENTO"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_BDA_DEPARTAMENTO.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_BDA_EMPRESA"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_BDA_EMPRESA.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_BDA_ENTIDADE"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_BDA_ENTIDADE.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_BDA_FAMILIA"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_BDA_FAMILIA.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_BDA_GIA_ARTIGO_STOCKS"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_BDA_GIA_ARTIGO_STOCKS.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_BDA_GIA_ARTIGO_TAMANHO"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_BDA_GIA_ARTIGO_TAMANHO.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_BDA_GIA_COLAB"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_BDA_GIA_COLAB.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_BDA_GIA_FM_LINHAS_DETA"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_BDA_GIA_FM_LINHAS_DETA.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_BDA_GIA_FMENT"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_BDA_GIA_FMENT.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_BDA_GIA_FMENT_LINHAS"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_BDA_GIA_FMENT_LINHAS.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_BDA_GIA_GRUPO"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_BDA_GIA_GRUPO.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_BDA_GIA_TAM_PRECO_LIN"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_BDA_GIA_TAM_PRECO_LIN.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_BDA_GIATFACT"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_BDA_GIATFACT.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_BDA_GOA_MARCA"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_BDA_GOA_MARCA.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_BDA_LOCALIZACAO"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_BDA_LOCALIZACAO.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_BDA_MOVI_PRODUTOS"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_BDA_MOVI_PRODUTOS.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_BDA_POC"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_BDA_POC.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_BDA_POS_FMENT"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_BDA_POS_FMENT.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_BDA_POS_FMENT_LINHAS"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_BDA_POS_FMENT_LINHAS.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_BDA_POS_MOVCARTAO"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_BDA_POS_MOVCARTAO.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_BDA_TIPO_ARTIGO"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_BDA_TIPO_ARTIGO.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_BDA_TIPO_ENTIDADE"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_BDA_TIPO_ENTIDADE.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_DS_ARMAZEM"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_DS_ARMAZEM.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_DS_ARTIGO"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_DS_ARTIGO.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_DS_ARTIGOS_DETALHE"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_DS_ARTIGOS_DETALHE.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_DS_DEPARTAMENTO"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_DS_DEPARTAMENTO.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_DS_EMPRESA"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_DS_EMPRESA.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_DS_ENTIDADE"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_DS_ENTIDADE.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_DS_FAMILIA"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_DS_FAMILIA.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_DS_GIA_ARTIGO_STOCKS"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_DS_GIA_ARTIGO_STOCKS.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_DS_GIA_ARTIGO_TAMANHO"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_DS_GIA_ARTIGO_TAMANHO.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_DS_GIA_COLAB"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_DS_GIA_COLAB.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_DS_GIA_FM_LINHAS_DETA"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_DS_GIA_FM_LINHAS_DETA.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_DS_GIA_FMENT"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_DS_GIA_FMENT.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_DS_GIA_FMENT_LINHAS"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_DS_GIA_FMENT_LINHAS.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_DS_GIA_GRUPO"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_DS_GIA_GRUPO.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_DS_GIA_TAM_PRECO_LIN"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_DS_GIA_TAM_PRECO_LIN.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_DS_GIATFACT"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_DS_GIATFACT.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_DS_GOA_MARCA"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_DS_GOA_MARCA.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_DS_LOCALIZACAO"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_DS_LOCALIZACAO.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_DS_MOVI_PRODUTOS"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_DS_MOVI_PRODUTOS.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_DS_POC"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_DS_POC.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_DS_POS_FMENT"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_DS_POS_FMENT.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_DS_POS_FMENT_LINHAS"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_DS_POS_FMENT_LINHAS.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_DS_POS_MOVCARTAO"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_DS_POS_MOVCARTAO.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_DS_TIPO_ARTIGO"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_DS_TIPO_ARTIGO.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_DS_TIPO_ENTIDADE"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_DS_TIPO_ENTIDADE.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_MB_ARMAZEM"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_MB_ARMAZEM.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_MB_ARTIGOS"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_MB_ARTIGOS.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_MB_ARTIGOS_DETALHE"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_MB_ARTIGOS_DETALHE.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_MB_DEPARTAMENTO"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_MB_DEPARTAMENTO.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_MB_EMPRESA"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_MB_EMPRESA.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_MB_ENTIDADE"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_MB_ENTIDADE.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_MB_FAMILIA"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_MB_FAMILIA.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_MB_GIA_ARTIGO_STOCKS"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_MB_GIA_ARTIGO_STOCKS.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_MB_GIA_ARTIGO_TAMANHO"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_MB_GIA_ARTIGO_TAMANHO.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_MB_GIA_COLAB"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_MB_GIA_COLAB.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_MB_GIA_FM_LINHAS_DETA"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_MB_GIA_FM_LINHAS_DETA.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_MB_GIA_FMENT"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_MB_GIA_FMENT.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_MB_GIA_FMENT_LINHAS"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_MB_GIA_FMENT_LINHAS.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_MB_GIA_GRUPO"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_MB_GIA_GRUPO.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_MB_GIA_TAM_PRECO_LIN"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_MB_GIA_TAM_PRECO_LIN.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_MB_GIATFACT"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_MB_GIATFACT.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_MB_GOA_MARCA"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_MB_GOA_MARCA.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_MB_LOCALIZACAO"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_MB_LOCALIZACAO.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_MB_MOVI_PRODUTOS"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_MB_MOVI_PRODUTOS.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_MB_POC"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_MB_POC.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_MB_POS_MOVCARTAO"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_MB_POS_MOVCARTAO.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_MB_TIPO_ARTIGO"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_MB_TIPO_ARTIGO.parquet"
+						}
+					},
+					{
+						"source": {
+							"table": "ZEXT_MB_TIPO_ENTIDADE"
+						},
+						"destination": {
+							"fileName": "BEDIVARZEXT_MB_TIPO_ENTIDADE.parquet"
+						}
+					}
+				]
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2021-08-30T08:05:44Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

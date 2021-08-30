@@ -1,0 +1,6 @@
+{
+	"name": "integrationRuntimeJosep",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}

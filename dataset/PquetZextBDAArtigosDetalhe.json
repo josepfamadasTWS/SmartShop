@@ -1,0 +1,110 @@
+{
+	"name": "PquetZextBDAArtigosDetalhe",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DataLakeStorageParquetFiles",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Bedivar/SourcesDataLake"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "ZEXT_BDA_ARTIGOS_DETALHE",
+				"folderPath": "rawfiles/IngestData/ERP",
+				"fileSystem": "bedivar"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "CODIGO_ARM",
+				"type": "UTF8"
+			},
+			{
+				"name": "REFERENCIA",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CHAVE",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_COR",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_TAMANHO",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_LOTE",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_LOCALIZACAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CARACT01",
+				"type": "UTF8"
+			},
+			{
+				"name": "CARACT02",
+				"type": "UTF8"
+			},
+			{
+				"name": "CARACT03",
+				"type": "UTF8"
+			},
+			{
+				"name": "CARACT04",
+				"type": "UTF8"
+			},
+			{
+				"name": "CARACT05",
+				"type": "UTF8"
+			},
+			{
+				"name": "CARACT06",
+				"type": "UTF8"
+			},
+			{
+				"name": "CARACT07",
+				"type": "UTF8"
+			},
+			{
+				"name": "CARACT08",
+				"type": "UTF8"
+			},
+			{
+				"name": "CARACT09",
+				"type": "UTF8"
+			},
+			{
+				"name": "CARACT10",
+				"type": "UTF8"
+			},
+			{
+				"name": "QUANTIDADE",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "VALOR",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,2672 @@
+{
+	"name": "COPY_PARKET",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data ZEXT_MB_GIA_FMENT_LINHAS",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "OracleSource",
+						"partitionOption": "None",
+						"queryTimeout": "02:00:00"
+					},
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "NUM_DOC",
+									"type": "String"
+								},
+								"sink": {
+									"name": "NUM_DOC",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DIARIO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DIARIO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ANO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ANO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "N_LINHA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "N_LINHA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LINHA_PARENT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "LINHA_PARENT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DATA_DOC",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "DATA_DOC",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "POCA_CONTA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "POCA_CONTA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "POCA_ENTI",
+									"type": "String"
+								},
+								"sink": {
+									"name": "POCA_ENTI",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ITEM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ITEM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ARMAZEM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ARMAZEM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_REF",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PROD_REF",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_REF_ALT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PROD_REF_ALT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "VPROD_REF",
+									"type": "String"
+								},
+								"sink": {
+									"name": "VPROD_REF",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_DESC",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PROD_DESC",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_DESC_IMP",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PROD_DESC_IMP",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "VPROD_DESC",
+									"type": "String"
+								},
+								"sink": {
+									"name": "VPROD_DESC",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_UNID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PROD_UNID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "COD_INTEGRACAO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "COD_INTEGRACAO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "COD_PRECO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "COD_PRECO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_TXIVA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PROD_TXIVA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CIVA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CIVA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TAXA_IVA",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "TAXA_IVA",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "E_COMPOSTO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "E_COMPOSTO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "COMPOSTO_TIPO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "COMPOSTO_TIPO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "COD_DEPART",
+									"type": "String"
+								},
+								"sink": {
+									"name": "COD_DEPART",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "COD_FAMILIA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "COD_FAMILIA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_QTD",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_QTD",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_QTD2",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_QTD2",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_QTD_1",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_QTD_1",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_QTD_2",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_QTD_2",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_QTD_3",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_QTD_3",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_QTD_4",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_QTD_4",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_QTD_EMB",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_QTD_EMB",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_QTD_CARGA",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_QTD_CARGA",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_QTD_PF",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_QTD_PF",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_QTD_LIQ",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_QTD_LIQ",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_QTD_LIQ2",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_QTD_LIQ2",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_QTD_DESCARGA",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_QTD_DESCARGA",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_QTD_DESCARGA2",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_QTD_DESCARGA2",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_QTD_DEV",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_QTD_DEV",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_QTD_DEV2",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_QTD_DEV2",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_PRECO_REC",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_PRECO_REC",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_CUNIT",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_CUNIT",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_CUNIT_CAMBIO",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_CUNIT_CAMBIO",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PRECO_MEDIO_CUS",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PRECO_MEDIO_CUS",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PRECO_CUSTO_FICHA",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PRECO_CUSTO_FICHA",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_STOCK_ACT",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_STOCK_ACT",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "DATA_ENTREGA",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "DATA_ENTREGA",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "DATA_ENTREGA2",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "DATA_ENTREGA2",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "OBS1",
+									"type": "Byte[]"
+								},
+								"sink": {
+									"name": "OBS1",
+									"type": "Byte[]"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_DESC1",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_DESC1",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_DESC2",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_DESC2",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_DESC3",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_DESC3",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_DESC4",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_DESC4",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_DESCF",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_DESCF",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "VALOR_FRETE",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "VALOR_FRETE",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "TOTAL_IVA",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "TOTAL_IVA",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "TOTAL_IVA_CAMBIO",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "TOTAL_IVA_CAMBIO",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "TOTAL_DESCONTO",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "TOTAL_DESCONTO",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "TOTAL_DESCONTO_CAMBIO",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "TOTAL_DESCONTO_CAMBIO",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "TOTAL_LINHA",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "TOTAL_LINHA",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "TOTAL_ILIQUIDO",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "TOTAL_ILIQUIDO",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "TOTAL_ILIQUIDO_CAMBIO",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "TOTAL_ILIQUIDO_CAMBIO",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "TOTAL_LIQ_SIVA",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "TOTAL_LIQ_SIVA",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "TOTAL_LIQ_SIVA_CAMBIO",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "TOTAL_LIQ_SIVA_CAMBIO",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "LOTE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "LOTE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DATA_VALIDADE",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "DATA_VALIDADE",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "LOCALIZACAO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "LOCALIZACAO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "GRUPO_DOC",
+									"type": "String"
+								},
+								"sink": {
+									"name": "GRUPO_DOC",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MOV_STOCK",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MOV_STOCK",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "COMPRA_VENDA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "COMPRA_VENDA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LINHA_FACTURADA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "LINHA_FACTURADA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LINHA_DESCARGA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "LINHA_DESCARGA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TEM_QTD_LIQ",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TEM_QTD_LIQ",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DOC_ORIGEM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DOC_ORIGEM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LINHA_REFERENCIA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "LINHA_REFERENCIA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CTRL_LOCALIZACAO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CTRL_LOCALIZACAO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CTRL_LOTE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CTRL_LOTE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CTRL_NSERIE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CTRL_NSERIE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DIARIO_OBRA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DIARIO_OBRA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "NUM_OBRA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "NUM_OBRA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CAMPO_AUX1",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CAMPO_AUX1",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CAMPO_AUX2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CAMPO_AUX2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CAMPO_AUX3",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CAMPO_AUX3",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CAMPO_AUX4",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CAMPO_AUX4",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CAMPO_AUX5",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CAMPO_AUX5",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CAMPO_AUX6",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CAMPO_AUX6",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CAMPO_AUX7",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CAMPO_AUX7",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CAMPO_AUX8",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CAMPO_AUX8",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CAMPO_AUX9",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CAMPO_AUX9",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CAMPO_AUX10",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CAMPO_AUX10",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "UNID_MD",
+									"type": "String"
+								},
+								"sink": {
+									"name": "UNID_MD",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "N_ETIQUETAS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "N_ETIQUETAS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TEM_ASSOCIADOS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TEM_ASSOCIADOS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LINHA_ASSOCIADO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "LINHA_ASSOCIADO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CUSTOS_ADICIONAIS",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "CUSTOS_ADICIONAIS",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "CUSTOS_ADICIONAIS2",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "CUSTOS_ADICIONAIS2",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "CUSTOS_PROCESSOS",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "CUSTOS_PROCESSOS",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "ESTADO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ESTADO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "QTD_REAL",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "QTD_REAL",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "QTD_REAL2",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "QTD_REAL2",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "INTSTAT_MASSALIQ",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "INTSTAT_MASSALIQ",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "INTSTAT_UNIDSP",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "INTSTAT_UNIDSP",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "INTSTAT_VALEST",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "INTSTAT_VALEST",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "COMISSAO",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "COMISSAO",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "COD_PROMOCAO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "COD_PROMOCAO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "VALES",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "VALES",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "E_USADO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "E_USADO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CUSTO_USADOS",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "CUSTO_USADOS",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "REF_ASSOC_DIRECT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "REF_ASSOC_DIRECT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "NUM_CONTRATO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "NUM_CONTRATO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TIPO_ASSOCIADO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TIPO_ASSOCIADO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PCONTA_OPERADOR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PCONTA_OPERADOR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PENTI_OPERADOR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PENTI_OPERADOR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "COD_TIPO_LINHA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "COD_TIPO_LINHA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "OFERTA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "OFERTA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "QTD_OFERTA",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "QTD_OFERTA",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "TOTAL_OFERTA",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "TOTAL_OFERTA",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "TOTAL_OFERTA_CAMBIO",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "TOTAL_OFERTA_CAMBIO",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "NUM_AUTORIZACAO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "NUM_AUTORIZACAO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "NUM_LINHA_AUTORIZACAO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "NUM_LINHA_AUTORIZACAO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CTRL_CORES",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CTRL_CORES",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CTRL_TAMANHOS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CTRL_TAMANHOS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CTRL_CARACT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CTRL_CARACT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "COR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "COR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TAMANHO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TAMANHO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TAMANHO1",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "TAMANHO1",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "TAMANHO2",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "TAMANHO2",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "AGRAVANTE",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "AGRAVANTE",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "AGRAVANTE1",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "AGRAVANTE1",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "AGRAVANTE2",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "AGRAVANTE2",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "AGRAVANTE3",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "AGRAVANTE3",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "AGRAVANTE4",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "AGRAVANTE4",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "AGRAVANTE5",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "AGRAVANTE5",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "ESTADO_LPE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ESTADO_LPE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CARACT01",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CARACT01",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CARACT02",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CARACT02",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CARACT03",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CARACT03",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CARACT04",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CARACT04",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CARACT05",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CARACT05",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CARACT06",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CARACT06",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CARACT07",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CARACT07",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CARACT08",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CARACT08",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CARACT09",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CARACT09",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CARACT10",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CARACT10",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "OUTROS_CUSTPROV",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "OUTROS_CUSTPROV",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "DOC_DESTINO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DOC_DESTINO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "UNIDADE_UL",
+									"type": "String"
+								},
+								"sink": {
+									"name": "UNIDADE_UL",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_PRECO_UL",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_PRECO_UL",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "ID_AUTO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ID_AUTO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MOTIVO_ISENCAO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MOTIVO_ISENCAO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TIPO_EXTRA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TIPO_EXTRA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MOTIVO_ATRASO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MOTIVO_ATRASO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TIPO_DESCONTO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TIPO_DESCONTO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ORIGEM_PDA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ORIGEM_PDA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ORIGEM_PRECARIO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ORIGEM_PRECARIO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CUSTOS_PROCESSOS2",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "CUSTOS_PROCESSOS2",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "MOTIVO_CTRDOC",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MOTIVO_CTRDOC",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MOTIVO_ALTESTADO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MOTIVO_ALTESTADO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DESCONTO_MAX1",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "DESCONTO_MAX1",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "DESCONTO_MAX2",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "DESCONTO_MAX2",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "DESCONTO_MAX1P",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "DESCONTO_MAX1P",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "TRANS_MATRICULA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TRANS_MATRICULA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TRANS_DIVISAO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TRANS_DIVISAO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TRANS_SELO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TRANS_SELO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "COD_MOTIVO_DEVOLUCAO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "COD_MOTIVO_DEVOLUCAO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DESCRICAO_MOTIVO_ANULACAO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DESCRICAO_MOTIVO_ANULACAO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "NSERIE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "NSERIE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TRANS_GUIA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TRANS_GUIA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "VALIDADO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "VALIDADO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "VALIDADOPOR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "VALIDADOPOR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "VALIDADODATA",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "VALIDADODATA",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "OBS2",
+									"type": "Byte[]"
+								},
+								"sink": {
+									"name": "OBS2",
+									"type": "Byte[]"
+								}
+							},
+							{
+								"source": {
+									"name": "DOC_PALETE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DOC_PALETE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DOC_EMBRULHO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DOC_EMBRULHO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DIARIO_CPA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DIARIO_CPA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "COD_PLANO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "COD_PLANO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ANO_PLANO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ANO_PLANO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ORDEMPROD",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ORDEMPROD",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "QTD_PF_FEITA",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "QTD_PF_FEITA",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROCESSO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PROCESSO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "NUM_VIATURA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "NUM_VIATURA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "POCA_ENOME",
+									"type": "String"
+								},
+								"sink": {
+									"name": "POCA_ENOME",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DESCONTO_NAO_COMISSIONAVEL",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "DESCONTO_NAO_COMISSIONAVEL",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "TEM_DMAX",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TEM_DMAX",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "N_LINHA_REF",
+									"type": "String"
+								},
+								"sink": {
+									"name": "N_LINHA_REF",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_QTD_NECE",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_QTD_NECE",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "ERRO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ERRO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DATA_MOVIMENTO",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "DATA_MOVIMENTO",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "COD_MOTIVO_ISENCAO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "COD_MOTIVO_ISENCAO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "NORMA_ISENCAO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "NORMA_ISENCAO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ISENCAO_CONFIRMADA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ISENCAO_CONFIRMADA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CRED_REFDOC",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CRED_REFDOC",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CONTA_DIRETA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CONTA_DIRETA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ENTIDADE_DIRETA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ENTIDADE_DIRETA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "IMPUTACAO_DIRETA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "IMPUTACAO_DIRETA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ANO_LETRA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ANO_LETRA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MES_LETRA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MES_LETRA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "NUM_LETRA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "NUM_LETRA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "NMOEDA1",
+									"type": "String"
+								},
+								"sink": {
+									"name": "NMOEDA1",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "NMOEDA2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "NMOEDA2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DATA_ULT_MODIFICACAO",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "DATA_ULT_MODIFICACAO",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "OPORTUNIDADE_CRM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "OPORTUNIDADE_CRM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TIPO_AVENCA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TIPO_AVENCA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "INICIO_AVENCA",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "INICIO_AVENCA",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "CONTADOR_CPA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CONTADOR_CPA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "VERBA_IMPSELO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "VERBA_IMPSELO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CAD_USER_DISCOUNT",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "CAD_USER_DISCOUNT",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "CAD_MARGEM",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "CAD_MARGEM",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "CAD_IVA",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "CAD_IVA",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "CAD_MONTAGEM",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "CAD_MONTAGEM",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "POCA_CONTA2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "POCA_CONTA2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "POCA_ENTI2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "POCA_ENTI2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CUSTOS_PROCESSOS3",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "CUSTOS_PROCESSOS3",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "CALCULO_BLOQUEADO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CALCULO_BLOQUEADO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PESO_UNITARIO",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PESO_UNITARIO",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "VOLUME_UNITARIO",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "VOLUME_UNITARIO",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "TIPO_IMPOSTO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TIPO_IMPOSTO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TAXA_IS",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "TAXA_IS",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "VALOR_IS",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "VALOR_IS",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "TOTAL_IS",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "TOTAL_IS",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "TOTAL_IS_CAMBIO",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "TOTAL_IS_CAMBIO",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "DIAS_RECLAMACAO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DIAS_RECLAMACAO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "OBS_ALTESTADO",
+									"type": "Byte[]"
+								},
+								"sink": {
+									"name": "OBS_ALTESTADO",
+									"type": "Byte[]"
+								}
+							},
+							{
+								"source": {
+									"name": "OBS_CTRDOC",
+									"type": "Byte[]"
+								},
+								"sink": {
+									"name": "OBS_CTRDOC",
+									"type": "Byte[]"
+								}
+							},
+							{
+								"source": {
+									"name": "NUM_CONT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "NUM_CONT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PNEU_ALTURA_BORRACHA",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PNEU_ALTURA_BORRACHA",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PNEU_DURABILIDADE",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PNEU_DURABILIDADE",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "CHAVE_PLA_EQ",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CHAVE_PLA_EQ",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "IDCRM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "IDCRM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "AREA_NEGOCIO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "AREA_NEGOCIO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CLASSE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CLASSE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "GRUPO_EMBALAGEM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "GRUPO_EMBALAGEM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "NUM_UN",
+									"type": "String"
+								},
+								"sink": {
+									"name": "NUM_UN",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CAIXAS",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CAIXAS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PONTOS_ADR",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PONTOS_ADR",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PESO_LQD",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PESO_LQD",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PESO_BRUTO",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PESO_BRUTO",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "CALCULAR_PESO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CALCULAR_PESO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "INDICE_CARGA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "INDICE_CARGA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TIPO_PISO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TIPO_PISO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "VALOR_CARCACA",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "VALOR_CARCACA",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "VALOR_RECAUCHUTAGEM",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "VALOR_RECAUCHUTAGEM",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "MATRICULA_V",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MATRICULA_V",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "INVP_PERC",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "INVP_PERC",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "OBS_ESTADO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "OBS_ESTADO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LC_TRACKING_NUMBER",
+									"type": "String"
+								},
+								"sink": {
+									"name": "LC_TRACKING_NUMBER",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CONTROLO_REQ",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CONTROLO_REQ",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PRECO_MEDIO_CUS_M2",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PRECO_MEDIO_CUS_M2",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "TECDOC_ID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TECDOC_ID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TECDOC_MODELO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TECDOC_MODELO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DIAS_ENTREGA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DIAS_ENTREGA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ALTERA_TOTAL_LINHA_CIVA",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "ALTERA_TOTAL_LINHA_CIVA",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "EXPORTADO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EXPORTADO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FACT_AUTO_MED",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "FACT_AUTO_MED",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PRECO_TRANSPORTE",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PRECO_TRANSPORTE",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_DESC1_AUX",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_DESC1_AUX",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_DESC2_AUX",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_DESC2_AUX",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_DESC3_AUX",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_DESC3_AUX",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_DESC4_AUX",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_DESC4_AUX",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PROD_DESCF_AUX",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "PROD_DESCF_AUX",
+									"type": "Decimal"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "ZEXT_MB_GIA_FMENT_LINHAS",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Parquet_ZEXT_MB_GIA_FMENT_LINHAS",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "4ENTITIES/BEDIVAR"
+		},
+		"annotations": [],
+		"lastPublishTime": "2020-08-14T10:32:00Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

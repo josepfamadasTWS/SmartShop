@@ -1,0 +1,200 @@
+{
+	"name": "PquetZextBDAArmazem",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DataLakeStorageParquetFiles",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Bedivar/SourcesDataLake"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "ZEXT_BDA_ARMAZEM",
+				"folderPath": "rawfiles/IngestData/ERP",
+				"fileSystem": "bedivar"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "CODIGO_ARM",
+				"type": "UTF8"
+			},
+			{
+				"name": "NOME",
+				"type": "UTF8"
+			},
+			{
+				"name": "LOCAL_CARGA",
+				"type": "UTF8"
+			},
+			{
+				"name": "MORADA",
+				"type": "UTF8"
+			},
+			{
+				"name": "LOCALIDADE",
+				"type": "UTF8"
+			},
+			{
+				"name": "PAIS_COD",
+				"type": "UTF8"
+			},
+			{
+				"name": "CPOS_COD",
+				"type": "UTF8"
+			},
+			{
+				"name": "CPOS_DESC",
+				"type": "UTF8"
+			},
+			{
+				"name": "MATRICULA",
+				"type": "UTF8"
+			},
+			{
+				"name": "SERIE_NUMERACAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "E_SERVICO",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_OFICINA",
+				"type": "UTF8"
+			},
+			{
+				"name": "LOCK_USER",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_POC",
+				"type": "UTF8"
+			},
+			{
+				"name": "PRECO_INVENTARIO",
+				"type": "UTF8"
+			},
+			{
+				"name": "ARM_DESLOCACOES",
+				"type": "UTF8"
+			},
+			{
+				"name": "NUM_AUTOMATICA",
+				"type": "UTF8"
+			},
+			{
+				"name": "MASCARA_NUM_AUTOM",
+				"type": "UTF8"
+			},
+			{
+				"name": "PESQ_MANUAL_TEMPOS",
+				"type": "UTF8"
+			},
+			{
+				"name": "ARM_IVA_INCLUIDO",
+				"type": "UTF8"
+			},
+			{
+				"name": "ARM_PRECO_COD",
+				"type": "UTF8"
+			},
+			{
+				"name": "SEGMENTACAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "E_PARQUE",
+				"type": "UTF8"
+			},
+			{
+				"name": "E_DMM",
+				"type": "UTF8"
+			},
+			{
+				"name": "GLN",
+				"type": "UTF8"
+			},
+			{
+				"name": "EXPORTACAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "MARGEM_MINIMA_VENDAS",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MARGEM1",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MARGEM2",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MARGEM3",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MARGEM4",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MARGEM5",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MARGEM6",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "COD_ESTADO",
+				"type": "UTF8"
+			},
+			{
+				"name": "INVENTARIO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CATEGORIA",
+				"type": "UTF8"
+			},
+			{
+				"name": "MASCARA_DESC_AUTOM",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESC_AUTOMATICA",
+				"type": "UTF8"
+			},
+			{
+				"name": "ORDEM",
+				"type": "UTF8"
+			},
+			{
+				"name": "REVISOES_TAB",
+				"type": "UTF8"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

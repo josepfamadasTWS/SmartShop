@@ -1,0 +1,39 @@
+{
+	"name": "pipeline4",
+	"properties": {
+		"activities": [
+			{
+				"name": "Transformation",
+				"type": "DatabricksSparkJar",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"mainClassName": "Transformation",
+					"parameters": [],
+					"libraries": [
+						{
+							"jar": "dbfs:/mnt/DatalakeGen2/bedivar/jars/4ebigdata_2_11_0_1.jar"
+						}
+					]
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"folder": {
+			"name": "4ENTITIES/BEDIVAR/Trip"
+		},
+		"annotations": [],
+		"lastPublishTime": "2021-08-30T08:05:45Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

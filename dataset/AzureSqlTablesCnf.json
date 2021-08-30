@@ -1,0 +1,68 @@
+{
+	"name": "AzureSqlTablesCnf",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzSqlDdbbCnf",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Bedivar/Trip"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "IdCompany",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Company",
+				"type": "varchar"
+			},
+			{
+				"name": "Tablename",
+				"type": "varchar"
+			},
+			{
+				"name": "Datasource",
+				"type": "varchar"
+			},
+			{
+				"name": "MaxLastUpdateDate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "Enable",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IncrementalFullLoad",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Watermarktable",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "WatermarktableBefore",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "NumRows",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "cnf_sources"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

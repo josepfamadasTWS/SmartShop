@@ -1,0 +1,29 @@
+{
+	"name": "OracleOnpremisBsrBedivar",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "OracleOnPremis",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"cw_table": {
+				"type": "string",
+				"defaultValue": null
+			}
+		},
+		"folder": {
+			"name": "Bedivar/Trip"
+		},
+		"annotations": [],
+		"type": "OracleTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "BEDIVAR",
+			"table": {
+				"value": "@dataset().cw_table",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

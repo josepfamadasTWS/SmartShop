@@ -1,0 +1,49 @@
+{
+	"name": "SetConfig",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzSqlDdbbCnf",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "tutorials"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Name",
+				"type": "varchar"
+			},
+			{
+				"name": "Type",
+				"type": "varchar"
+			},
+			{
+				"name": "Enabled",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Incremental_FullLoad",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "MaxLastUpdateDate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "Source",
+				"type": "varchar"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

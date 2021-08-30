@@ -1,0 +1,46 @@
+{
+	"name": "PquetZextBDAGiaArtigoTamanho",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DataLakeStorageParquetFiles",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Bedivar/SourcesDataLake"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "ZEXT_BDA_GIA_ARTIGO_TAMANHO",
+				"folderPath": "rawfiles/IngestData/ERP",
+				"fileSystem": "bedivar"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "CODIGO_ARM",
+				"type": "UTF8"
+			},
+			{
+				"name": "REFERENCIA",
+				"type": "UTF8"
+			},
+			{
+				"name": "CODIGO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DEFEITO",
+				"type": "UTF8"
+			},
+			{
+				"name": "SUSPENSO",
+				"type": "UTF8"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

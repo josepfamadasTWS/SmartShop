@@ -1,0 +1,1214 @@
+{
+	"name": "PquetZextMBGiatfact",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DataLakeStorageParquetFiles",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Bedivar/SourcesDataLake"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "ZEXT_MB_GIATFACT",
+				"folderPath": "rawfiles/IngestData/ERP",
+				"fileSystem": "bedivar"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "ORDEM",
+				"type": "UTF8"
+			},
+			{
+				"name": "TABE_NUMER",
+				"type": "UTF8"
+			},
+			{
+				"name": "DE_DOC_MEN",
+				"type": "UTF8"
+			},
+			{
+				"name": "DE_DOC_INT",
+				"type": "UTF8"
+			},
+			{
+				"name": "IMPR_DOCUM",
+				"type": "UTF8"
+			},
+			{
+				"name": "REIMPRIME_DOC",
+				"type": "UTF8"
+			},
+			{
+				"name": "DEBI_CREDI",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESCRICAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CONTA_TERCEIROS",
+				"type": "UTF8"
+			},
+			{
+				"name": "CONTA_MENU2",
+				"type": "UTF8"
+			},
+			{
+				"name": "DOC_CREDITO",
+				"type": "UTF8"
+			},
+			{
+				"name": "MENSAGEM",
+				"type": "BINARY"
+			},
+			{
+				"name": "INTEGRA_CONTB",
+				"type": "UTF8"
+			},
+			{
+				"name": "FACTURA_AUTOMATICO",
+				"type": "UTF8"
+			},
+			{
+				"name": "MOV_STOCK",
+				"type": "UTF8"
+			},
+			{
+				"name": "VALORPOC1",
+				"type": "UTF8"
+			},
+			{
+				"name": "VALORPOC2",
+				"type": "UTF8"
+			},
+			{
+				"name": "VALORPOC3",
+				"type": "UTF8"
+			},
+			{
+				"name": "NUM_AUT_DESC",
+				"type": "UTF8"
+			},
+			{
+				"name": "SINALPOC1",
+				"type": "UTF8"
+			},
+			{
+				"name": "SINALPOC2",
+				"type": "UTF8"
+			},
+			{
+				"name": "SINALPOC3",
+				"type": "UTF8"
+			},
+			{
+				"name": "IMPR_IMEDIAT",
+				"type": "UTF8"
+			},
+			{
+				"name": "F_RESUMO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CONDICAO4",
+				"type": "UTF8"
+			},
+			{
+				"name": "CONDICAO5",
+				"type": "UTF8"
+			},
+			{
+				"name": "CONDICAO6",
+				"type": "UTF8"
+			},
+			{
+				"name": "ACT_ULT_COMP",
+				"type": "UTF8"
+			},
+			{
+				"name": "DOC_IMPORT",
+				"type": "UTF8"
+			},
+			{
+				"name": "CONTROLA_FOLIO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CONTA_CTB",
+				"type": "UTF8"
+			},
+			{
+				"name": "AC_PRECO_MEDIO",
+				"type": "UTF8"
+			},
+			{
+				"name": "ACT_ULT_CUSTO",
+				"type": "UTF8"
+			},
+			{
+				"name": "ACT_PRECO_VENDA",
+				"type": "UTF8"
+			},
+			{
+				"name": "CODIGO_IMPRESS",
+				"type": "UTF8"
+			},
+			{
+				"name": "PRECOS_ALTERNATIVOS",
+				"type": "UTF8"
+			},
+			{
+				"name": "N_VIAS_IMPRESS",
+				"type": "UTF8"
+			},
+			{
+				"name": "N_C_ORIGINAL",
+				"type": "UTF8"
+			},
+			{
+				"name": "N_C_DUPLICADO",
+				"type": "UTF8"
+			},
+			{
+				"name": "N_C_TRIPLICADO",
+				"type": "UTF8"
+			},
+			{
+				"name": "N_C_QUADRIPLICADO",
+				"type": "UTF8"
+			},
+			{
+				"name": "GRUPO_DOC",
+				"type": "UTF8"
+			},
+			{
+				"name": "DOC_AUTOMATICO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO_CHAVE",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESCARREGA_LINHAS",
+				"type": "UTF8"
+			},
+			{
+				"name": "IMPORTA_LINHAS",
+				"type": "UTF8"
+			},
+			{
+				"name": "PERMITE_DESCARREGAR",
+				"type": "UTF8"
+			},
+			{
+				"name": "CONF_DOC",
+				"type": "UTF8"
+			},
+			{
+				"name": "CM_ENT_ARM",
+				"type": "UTF8"
+			},
+			{
+				"name": "CM_TIPO_MOV",
+				"type": "UTF8"
+			},
+			{
+				"name": "MOV_STOCK_AUTOMATICO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CONTROLA_PLAFON",
+				"type": "UTF8"
+			},
+			{
+				"name": "CONTROLA_REDLINE",
+				"type": "UTF8"
+			},
+			{
+				"name": "CONTROLA_DOCPEND",
+				"type": "UTF8"
+			},
+			{
+				"name": "BASE_COMISSOES",
+				"type": "UTF8"
+			},
+			{
+				"name": "ACUM_VENDAS",
+				"type": "UTF8"
+			},
+			{
+				"name": "ACUM_RECIBOS",
+				"type": "UTF8"
+			},
+			{
+				"name": "PROCESSA_COMISSOES",
+				"type": "UTF8"
+			},
+			{
+				"name": "PRECO_UTILIZ",
+				"type": "UTF8"
+			},
+			{
+				"name": "REF_PESQ",
+				"type": "UTF8"
+			},
+			{
+				"name": "PROG_TERMINAL",
+				"type": "UTF8"
+			},
+			{
+				"name": "BLOQ_REDLINE",
+				"type": "UTF8"
+			},
+			{
+				"name": "BLOQ_PLAFON",
+				"type": "UTF8"
+			},
+			{
+				"name": "CONTROLA_STOCK_MIN",
+				"type": "UTF8"
+			},
+			{
+				"name": "CONTROLA_STOCK_NEGA",
+				"type": "UTF8"
+			},
+			{
+				"name": "CONTROLA_STOCK_MAXIMO",
+				"type": "UTF8"
+			},
+			{
+				"name": "LOCK_USER",
+				"type": "UTF8"
+			},
+			{
+				"name": "ALTERA_DOC",
+				"type": "UTF8"
+			},
+			{
+				"name": "PASS_ALTERA_DOC",
+				"type": "UTF8"
+			},
+			{
+				"name": "ELIMINA_DOC",
+				"type": "UTF8"
+			},
+			{
+				"name": "PASS_ELIMINA_DOC",
+				"type": "UTF8"
+			},
+			{
+				"name": "IMP_CAR_TECN",
+				"type": "UTF8"
+			},
+			{
+				"name": "CTRL_DATAS",
+				"type": "UTF8"
+			},
+			{
+				"name": "MAPA_COMPRAS",
+				"type": "UTF8"
+			},
+			{
+				"name": "MAPA_VENDAS",
+				"type": "UTF8"
+			},
+			{
+				"name": "MULTIPAGAMENTO",
+				"type": "UTF8"
+			},
+			{
+				"name": "EMITE_ETIQUETAS",
+				"type": "UTF8"
+			},
+			{
+				"name": "ART_ASSOCIADO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CONJ_QTD",
+				"type": "UTF8"
+			},
+			{
+				"name": "UNID_ESPECIAL",
+				"type": "UTF8"
+			},
+			{
+				"name": "TIPO_CONFIGURACAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "VERIFICA_RESERVAS",
+				"type": "UTF8"
+			},
+			{
+				"name": "VERIFICA_ENCOMENDAS",
+				"type": "UTF8"
+			},
+			{
+				"name": "CUSTOS_ADICIONAIS",
+				"type": "UTF8"
+			},
+			{
+				"name": "BASE_PVENDA",
+				"type": "UTF8"
+			},
+			{
+				"name": "TIPO_CALCULO",
+				"type": "UTF8"
+			},
+			{
+				"name": "GUIA_VALORIZADA",
+				"type": "UTF8"
+			},
+			{
+				"name": "SEM_VENDAS_DINHEIRO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CTRL_STOCK_RESERVAS",
+				"type": "UTF8"
+			},
+			{
+				"name": "CTRL_STOCK_ENCOMENDAS",
+				"type": "UTF8"
+			},
+			{
+				"name": "CTRL_STOCK_CARGAS",
+				"type": "UTF8"
+			},
+			{
+				"name": "MOSTRA_COMPOSICAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "MULTIDIMENSIONAL",
+				"type": "UTF8"
+			},
+			{
+				"name": "SUGCONTRATOS",
+				"type": "UTF8"
+			},
+			{
+				"name": "ACTCONTRATOS",
+				"type": "UTF8"
+			},
+			{
+				"name": "CONTRATOSPLIQ",
+				"type": "UTF8"
+			},
+			{
+				"name": "ALTERA_DATADOC",
+				"type": "UTF8"
+			},
+			{
+				"name": "ALTERA_DOCDESC",
+				"type": "UTF8"
+			},
+			{
+				"name": "PENALIZACAO",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "ALTERA_COMPOSICAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "TEM_ADIANTAMENTO",
+				"type": "UTF8"
+			},
+			{
+				"name": "ANULA_ADIANTAMENTO",
+				"type": "UTF8"
+			},
+			{
+				"name": "NUM_LINHA_DOC",
+				"type": "UTF8"
+			},
+			{
+				"name": "VER_NOS_RECIBOS",
+				"type": "UTF8"
+			},
+			{
+				"name": "AVISO_PORTES",
+				"type": "UTF8"
+			},
+			{
+				"name": "AVISO_PROMOCOES",
+				"type": "UTF8"
+			},
+			{
+				"name": "SUGERE_NOTA_DEBITO",
+				"type": "UTF8"
+			},
+			{
+				"name": "QTD_LOTE_TOTAL",
+				"type": "UTF8"
+			},
+			{
+				"name": "ACT_FICHA_LOTE",
+				"type": "UTF8"
+			},
+			{
+				"name": "VERIFICA_DATA_VENC",
+				"type": "UTF8"
+			},
+			{
+				"name": "VERIFICA_CHPD",
+				"type": "UTF8"
+			},
+			{
+				"name": "VERIFICA_AMORT_LETRAS",
+				"type": "UTF8"
+			},
+			{
+				"name": "VERIFICA_PAG_LETRAS",
+				"type": "UTF8"
+			},
+			{
+				"name": "VERIFICA_DESC_RECIBO",
+				"type": "UTF8"
+			},
+			{
+				"name": "LOTES_QTD0",
+				"type": "UTF8"
+			},
+			{
+				"name": "VERIFICA_ESTADOS",
+				"type": "UTF8"
+			},
+			{
+				"name": "PERMITE_PRECO0",
+				"type": "UTF8"
+			},
+			{
+				"name": "ABONO_FRETE",
+				"type": "UTF8"
+			},
+			{
+				"name": "VERIFICA_MARGEM",
+				"type": "UTF8"
+			},
+			{
+				"name": "AVISOOBSERVACOES",
+				"type": "UTF8"
+			},
+			{
+				"name": "TIPOAVISOOBS",
+				"type": "UTF8"
+			},
+			{
+				"name": "PASSWSTOCKNEGATIVO",
+				"type": "UTF8"
+			},
+			{
+				"name": "TROCA_LOTESUGERIDO",
+				"type": "UTF8"
+			},
+			{
+				"name": "PERMITE_QTDDIFCONJ",
+				"type": "UTF8"
+			},
+			{
+				"name": "VALIDA_VDOC",
+				"type": "UTF8"
+			},
+			{
+				"name": "CALCULA_IVA",
+				"type": "UTF8"
+			},
+			{
+				"name": "CONF_EDI1",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAIXA_POS",
+				"type": "UTF8"
+			},
+			{
+				"name": "PRECO_ZERO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DOC_ZERO_POS",
+				"type": "UTF8"
+			},
+			{
+				"name": "PASSW_ASSOCIADOS",
+				"type": "UTF8"
+			},
+			{
+				"name": "MORADA_DEFEITO",
+				"type": "UTF8"
+			},
+			{
+				"name": "ART_ASSOCIADO_DESC",
+				"type": "UTF8"
+			},
+			{
+				"name": "CX_MULTIDIMENSIONAL",
+				"type": "UTF8"
+			},
+			{
+				"name": "CX_ASSOCIADOS",
+				"type": "UTF8"
+			},
+			{
+				"name": "CSATISF_RESTO",
+				"type": "UTF8"
+			},
+			{
+				"name": "EXTRAS_ACESSORIOS",
+				"type": "UTF8"
+			},
+			{
+				"name": "CRIAR_LPE",
+				"type": "UTF8"
+			},
+			{
+				"name": "LPE_ABATE",
+				"type": "UTF8"
+			},
+			{
+				"name": "SINAL_IVA",
+				"type": "UTF8"
+			},
+			{
+				"name": "REC_PMEDIO",
+				"type": "UTF8"
+			},
+			{
+				"name": "PESQ_ART_ENTI",
+				"type": "UTF8"
+			},
+			{
+				"name": "PESQ_ART_ENTI_BLOQ",
+				"type": "UTF8"
+			},
+			{
+				"name": "VALIDA_REF_REPETIDAS",
+				"type": "UTF8"
+			},
+			{
+				"name": "CALCULA_TALAO_DESCONTO",
+				"type": "UTF8"
+			},
+			{
+				"name": "UNIDADE_CALCVOL",
+				"type": "UTF8"
+			},
+			{
+				"name": "VER_DOCS_TRIGGERS",
+				"type": "UTF8"
+			},
+			{
+				"name": "PROVISORIO",
+				"type": "UTF8"
+			},
+			{
+				"name": "VAL_DF_OBSERVACOES",
+				"type": "UTF8"
+			},
+			{
+				"name": "USA_MATRIZ",
+				"type": "UTF8"
+			},
+			{
+				"name": "VAL_DF_PRECO_IVA_INCLUIDO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DISCRIMINA_CHEQUES",
+				"type": "UTF8"
+			},
+			{
+				"name": "PASSW_PESPECIAL",
+				"type": "UTF8"
+			},
+			{
+				"name": "SUG_PROD_EQUIV",
+				"type": "UTF8"
+			},
+			{
+				"name": "VERIFICA_GUIAS",
+				"type": "UTF8"
+			},
+			{
+				"name": "VER_ULT_MOV",
+				"type": "UTF8"
+			},
+			{
+				"name": "ENDOSSAR_CHEQUE",
+				"type": "UTF8"
+			},
+			{
+				"name": "ENDOSSAR_NUMERARIO",
+				"type": "UTF8"
+			},
+			{
+				"name": "IMPUTAR_CUSTOS",
+				"type": "UTF8"
+			},
+			{
+				"name": "VERIFICA_PZERO",
+				"type": "UTF8"
+			},
+			{
+				"name": "BLOQUEIA_PZERO",
+				"type": "UTF8"
+			},
+			{
+				"name": "EDI_GRAVAR",
+				"type": "UTF8"
+			},
+			{
+				"name": "EDI_DIR",
+				"type": "UTF8"
+			},
+			{
+				"name": "INT_CMP_VND",
+				"type": "UTF8"
+			},
+			{
+				"name": "CTRL_STOCK_ENC_FOR",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESCARREGA_MAIS",
+				"type": "UTF8"
+			},
+			{
+				"name": "BLOQUEIO_ARTENTI",
+				"type": "UTF8"
+			},
+			{
+				"name": "BLOQUEAR_PRODLIVRE",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESCARREGA_ALTPRECO",
+				"type": "UTF8"
+			},
+			{
+				"name": "RENEGOCIAR_PRECO",
+				"type": "UTF8"
+			},
+			{
+				"name": "ACTMINMAXESP",
+				"type": "UTF8"
+			},
+			{
+				"name": "TLTAMANHO",
+				"type": "UTF8"
+			},
+			{
+				"name": "LANDED_COST",
+				"type": "UTF8"
+			},
+			{
+				"name": "SOMAR_PRECOCOMP",
+				"type": "UTF8"
+			},
+			{
+				"name": "TEM_QUEST",
+				"type": "UTF8"
+			},
+			{
+				"name": "BLOQUEAR_ART_PRECARIO",
+				"type": "UTF8"
+			},
+			{
+				"name": "PERMITE_CONFERENCIA",
+				"type": "UTF8"
+			},
+			{
+				"name": "CBARRAS_RAPIDO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESCARREGA_OENTI",
+				"type": "UTF8"
+			},
+			{
+				"name": "MPROCESSO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESCARREGA_PROCVENDA",
+				"type": "UTF8"
+			},
+			{
+				"name": "RECINVP_ALTERA_PRECOS",
+				"type": "UTF8"
+			},
+			{
+				"name": "SO_DESCARGAS",
+				"type": "UTF8"
+			},
+			{
+				"name": "AVISA_MULTIMORADA",
+				"type": "UTF8"
+			},
+			{
+				"name": "AVISO_OBRAS",
+				"type": "UTF8"
+			},
+			{
+				"name": "IGNORAR_LOCANT",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_ESTADO_EQUIP",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESCARREGA_PALETES",
+				"type": "UTF8"
+			},
+			{
+				"name": "IMPRESSCICLO",
+				"type": "UTF8"
+			},
+			{
+				"name": "AVISO_OBS_DESC",
+				"type": "UTF8"
+			},
+			{
+				"name": "NCO_REABREOBRA",
+				"type": "UTF8"
+			},
+			{
+				"name": "GRUPO_SAFT",
+				"type": "UTF8"
+			},
+			{
+				"name": "VERIFICA_CONCURSOS",
+				"type": "UTF8"
+			},
+			{
+				"name": "CRIAR_PRECO_ESPECIAL",
+				"type": "UTF8"
+			},
+			{
+				"name": "IGNORAR_ESTADOS_ANT",
+				"type": "UTF8"
+			},
+			{
+				"name": "CTRL_VALOR_LIMITE",
+				"type": "UTF8"
+			},
+			{
+				"name": "MASCARA_LOTE",
+				"type": "UTF8"
+			},
+			{
+				"name": "MOV_IVA_ZERO",
+				"type": "UTF8"
+			},
+			{
+				"name": "OPERACOES_ESPECIAIS",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESC1_ALTERA_COMISSAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESC2_ALTERA_COMISSAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESC3_ALTERA_COMISSAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESC4_ALTERA_COMISSAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESCF_ALTERA_COMISSAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESDOBRA_LOTLOC",
+				"type": "UTF8"
+			},
+			{
+				"name": "CUSTO_IMOBILIZADO",
+				"type": "UTF8"
+			},
+			{
+				"name": "MOTIVO_ALTDOC",
+				"type": "UTF8"
+			},
+			{
+				"name": "VALOR_MAX_DESC_FIN_SEM_PWD",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "POS_SENHA",
+				"type": "UTF8"
+			},
+			{
+				"name": "POS_ABATE_PEDIDO",
+				"type": "UTF8"
+			},
+			{
+				"name": "TIPO_CARTAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "EMITIR_AUTOFACT",
+				"type": "UTF8"
+			},
+			{
+				"name": "SO_CHEQUE_A_DATA",
+				"type": "UTF8"
+			},
+			{
+				"name": "SO_CHEQUE_DATADO",
+				"type": "UTF8"
+			},
+			{
+				"name": "ANEXAR_IMPRIMIR1",
+				"type": "UTF8"
+			},
+			{
+				"name": "ANEXAR_IMPRIMIR2",
+				"type": "UTF8"
+			},
+			{
+				"name": "ANEXAR_IMPRIMIR3",
+				"type": "UTF8"
+			},
+			{
+				"name": "ANEXAR_IMPRIMIR4",
+				"type": "UTF8"
+			},
+			{
+				"name": "CONTROLA_CREDITO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CRIAR_GTF",
+				"type": "UTF8"
+			},
+			{
+				"name": "VERIFICA_CREDITO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CTB_GARANTIAS",
+				"type": "UTF8"
+			},
+			{
+				"name": "AVENCA",
+				"type": "UTF8"
+			},
+			{
+				"name": "TEM_REVISOES",
+				"type": "UTF8"
+			},
+			{
+				"name": "SUJEITO_RIC",
+				"type": "UTF8"
+			},
+			{
+				"name": "TP_ULT_MOV",
+				"type": "UTF8"
+			},
+			{
+				"name": "TIPO_BALANCA",
+				"type": "UTF8"
+			},
+			{
+				"name": "MATRIZ_VER_STOCK",
+				"type": "UTF8"
+			},
+			{
+				"name": "CRIAR_NSERIE_AUTOM",
+				"type": "UTF8"
+			},
+			{
+				"name": "GESTDOC_SENDYS",
+				"type": "UTF8"
+			},
+			{
+				"name": "GESTDOC_MOMENTO",
+				"type": "UTF8"
+			},
+			{
+				"name": "GESTDOC_IDPASTA",
+				"type": "UTF8"
+			},
+			{
+				"name": "GESTDOC_PASTA",
+				"type": "UTF8"
+			},
+			{
+				"name": "GESTDOC_POR_ANO",
+				"type": "UTF8"
+			},
+			{
+				"name": "GESTDOC_POR_MES",
+				"type": "UTF8"
+			},
+			{
+				"name": "GESTDOC_PASTA_FINAL",
+				"type": "UTF8"
+			},
+			{
+				"name": "GESTDOC_NATUREZA",
+				"type": "UTF8"
+			},
+			{
+				"name": "GESTDOC_TIPODOC",
+				"type": "UTF8"
+			},
+			{
+				"name": "GESTDOC_TIPODOC_DESC",
+				"type": "UTF8"
+			},
+			{
+				"name": "GESTDOC_VIA_COMUNICACAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "GESTDOC_VIA_COMUNICACAO_DESC",
+				"type": "UTF8"
+			},
+			{
+				"name": "GESTDOC_CATEGORIA",
+				"type": "UTF8"
+			},
+			{
+				"name": "GESTDOC_CATEGORIA_DESC",
+				"type": "UTF8"
+			},
+			{
+				"name": "GESTDOC_ACCAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "GESTDOC_PASTA_DESTINO",
+				"type": "UTF8"
+			},
+			{
+				"name": "ENVIAR_DOC_XLS",
+				"type": "UTF8"
+			},
+			{
+				"name": "RENEGOCIAR_PRECO_PREV",
+				"type": "UTF8"
+			},
+			{
+				"name": "DOC_GESTSTOCK",
+				"type": "UTF8"
+			},
+			{
+				"name": "CTRL_ESTADOS",
+				"type": "UTF8"
+			},
+			{
+				"name": "ESTADO_INICIAL",
+				"type": "UTF8"
+			},
+			{
+				"name": "TEM_PROMOCOES",
+				"type": "UTF8"
+			},
+			{
+				"name": "CTRL_LIMQTD_MORADA",
+				"type": "UTF8"
+			},
+			{
+				"name": "GESTDOC_OBRIGATORIO",
+				"type": "UTF8"
+			},
+			{
+				"name": "GESTDOC_DIRETO",
+				"type": "UTF8"
+			},
+			{
+				"name": "GESTDOC_POR_DIARIO",
+				"type": "UTF8"
+			},
+			{
+				"name": "GESTDOC_IMPRESSO",
+				"type": "UTF8"
+			},
+			{
+				"name": "GESTDOC_VIA",
+				"type": "UTF8"
+			},
+			{
+				"name": "VALIDA_CAPACIDADE",
+				"type": "UTF8"
+			},
+			{
+				"name": "ENVIAR_FAX",
+				"type": "UTF8"
+			},
+			{
+				"name": "ENVIAR_MAIL",
+				"type": "UTF8"
+			},
+			{
+				"name": "INTEGRACAO_MB",
+				"type": "UTF8"
+			},
+			{
+				"name": "TIPO_REF_MB",
+				"type": "UTF8"
+			},
+			{
+				"name": "VALIDA_ISENCAO_IVA",
+				"type": "UTF8"
+			},
+			{
+				"name": "ACTIVO",
+				"type": "UTF8"
+			},
+			{
+				"name": "ORDENACAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "BLOQUEIA_IMP_GUIAS",
+				"type": "UTF8"
+			},
+			{
+				"name": "CTRL_QTDMIN",
+				"type": "UTF8"
+			},
+			{
+				"name": "EXCLUIR_INVENTARIO",
+				"type": "UTF8"
+			},
+			{
+				"name": "POS_EMBARQUE",
+				"type": "UTF8"
+			},
+			{
+				"name": "FAZ_CALCULO_PONTOS_ADR",
+				"type": "UTF8"
+			},
+			{
+				"name": "STOCK_POSITIVO",
+				"type": "UTF8"
+			},
+			{
+				"name": "BANNER_IMPRESSOS",
+				"type": "BINARY"
+			},
+			{
+				"name": "INFO_ADIC_IMPRESSOS",
+				"type": "BINARY"
+			},
+			{
+				"name": "INFO_ADIC_IMPRESSOS2",
+				"type": "BINARY"
+			},
+			{
+				"name": "NIB_TRANSFERENCIAS",
+				"type": "BINARY"
+			},
+			{
+				"name": "TITULO_NIB_TRANSFERENCIAS",
+				"type": "UTF8"
+			},
+			{
+				"name": "PERMITE_IMPORTAR",
+				"type": "UTF8"
+			},
+			{
+				"name": "CONFIRMAR_PESOS",
+				"type": "UTF8"
+			},
+			{
+				"name": "LCA_ENTIDADE",
+				"type": "UTF8"
+			},
+			{
+				"name": "ABRIR_DOC_CONTAB",
+				"type": "UTF8"
+			},
+			{
+				"name": "PROD_SUG_PROM",
+				"type": "UTF8"
+			},
+			{
+				"name": "MORADA_DESCARGA",
+				"type": "UTF8"
+			},
+			{
+				"name": "CALCULA_RETENCAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "MAPA_VENDAS_VENDEDOR",
+				"type": "UTF8"
+			},
+			{
+				"name": "OBS_LEGAIS",
+				"type": "BINARY"
+			},
+			{
+				"name": "IMPRIME_OBS",
+				"type": "UTF8"
+			},
+			{
+				"name": "IMPRIME_COMPONENTES",
+				"type": "UTF8"
+			},
+			{
+				"name": "IMPRIME_INF_LOGISTICA",
+				"type": "UTF8"
+			},
+			{
+				"name": "IMPRIME_PRECOS",
+				"type": "UTF8"
+			},
+			{
+				"name": "INF_OBRA",
+				"type": "BINARY"
+			},
+			{
+				"name": "NUM_CASAS_DECIMAIS_UNIT",
+				"type": "UTF8"
+			},
+			{
+				"name": "ARM_SERVICOS",
+				"type": "UTF8"
+			},
+			{
+				"name": "AVISO_DESKTOP",
+				"type": "UTF8"
+			},
+			{
+				"name": "VALIDAR_COMISSOES",
+				"type": "UTF8"
+			},
+			{
+				"name": "PASSWSTOCKMINIMO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESCMASSA_ACORDO",
+				"type": "UTF8"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

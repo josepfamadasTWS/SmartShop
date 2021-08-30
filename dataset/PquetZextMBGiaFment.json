@@ -1,0 +1,1060 @@
+{
+	"name": "PquetZextMBGiaFment",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DataLakeStorageParquetFiles",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Bedivar/SourcesDataLake"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "ZEXT_MB_GIA_FMENT",
+				"folderPath": "rawfiles/IngestData/ERP",
+				"fileSystem": "bedivar"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "NUM_DOC",
+				"type": "UTF8"
+			},
+			{
+				"name": "DIARIO",
+				"type": "UTF8"
+			},
+			{
+				"name": "ANO",
+				"type": "UTF8"
+			},
+			{
+				"name": "MES",
+				"type": "UTF8"
+			},
+			{
+				"name": "LOCK_USER",
+				"type": "UTF8"
+			},
+			{
+				"name": "TIPO_DOC",
+				"type": "UTF8"
+			},
+			{
+				"name": "TIPO_DOC2",
+				"type": "UTF8"
+			},
+			{
+				"name": "POCA_CONTA",
+				"type": "UTF8"
+			},
+			{
+				"name": "POCA_ENTI",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_MORADA",
+				"type": "UTF8"
+			},
+			{
+				"name": "ENTI_CONTRIBUINTE",
+				"type": "UTF8"
+			},
+			{
+				"name": "PAIS_COD",
+				"type": "UTF8"
+			},
+			{
+				"name": "PAIS_DESC",
+				"type": "UTF8"
+			},
+			{
+				"name": "NUM_REQUISICAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "NUM_ENCOMENDA",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_CONDPAG",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESC_CONDPAG",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_PRECO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESC_CODPRECO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CONTA_VEND",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_VENDEDOR",
+				"type": "UTF8"
+			},
+			{
+				"name": "NOME_VENDEDOR",
+				"type": "UTF8"
+			},
+			{
+				"name": "DIAS_CREDITO",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_MERCADO",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_MOEDA",
+				"type": "UTF8"
+			},
+			{
+				"name": "MATRICULA_V",
+				"type": "UTF8"
+			},
+			{
+				"name": "N_CARGA",
+				"type": "UTF8"
+			},
+			{
+				"name": "LOCAL_CARGA",
+				"type": "UTF8"
+			},
+			{
+				"name": "LOCAL_DESCARGA",
+				"type": "UTF8"
+			},
+			{
+				"name": "DATA_CARGA",
+				"type": "INT96"
+			},
+			{
+				"name": "DATA_DESCARGA",
+				"type": "INT96"
+			},
+			{
+				"name": "HORA_SAIDA",
+				"type": "INT96"
+			},
+			{
+				"name": "HORA_CHEGADA",
+				"type": "INT96"
+			},
+			{
+				"name": "COD_EXPEDICAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESC_EXPEDICAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "OBSERVACOES",
+				"type": "BINARY"
+			},
+			{
+				"name": "SERIE",
+				"type": "UTF8"
+			},
+			{
+				"name": "FACTC_MOEDA",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "ENTI_DESSOCIAL",
+				"type": "UTF8"
+			},
+			{
+				"name": "ENTI_MORADA",
+				"type": "UTF8"
+			},
+			{
+				"name": "ENTI_CODPOSTAL",
+				"type": "UTF8"
+			},
+			{
+				"name": "ENTI_DESPOSTAL",
+				"type": "UTF8"
+			},
+			{
+				"name": "ENTI_LOCALI",
+				"type": "UTF8"
+			},
+			{
+				"name": "DES_MERCADO",
+				"type": "UTF8"
+			},
+			{
+				"name": "LOCALIDADE_POSTAL",
+				"type": "UTF8"
+			},
+			{
+				"name": "DATA_DOC",
+				"type": "INT96"
+			},
+			{
+				"name": "HORA_DOC",
+				"type": "INT96"
+			},
+			{
+				"name": "TOTAL_ILIQUIDO",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "TOTAL_DESCONTOS",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "VALOR_IVA",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "ENTI_NOME",
+				"type": "UTF8"
+			},
+			{
+				"name": "ANO_CONTAB",
+				"type": "UTF8"
+			},
+			{
+				"name": "MES_CONTAB",
+				"type": "UTF8"
+			},
+			{
+				"name": "DOC_FACTURADO",
+				"type": "UTF8"
+			},
+			{
+				"name": "TIPO_DOCUMENTO",
+				"type": "UTF8"
+			},
+			{
+				"name": "NUM_RESUMO",
+				"type": "UTF8"
+			},
+			{
+				"name": "PERIODO_RESUMO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DEBI_CREDI",
+				"type": "UTF8"
+			},
+			{
+				"name": "TOTAL_PORTES",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "DATA_ENTREGA",
+				"type": "INT96"
+			},
+			{
+				"name": "DATA_ENTREGA2",
+				"type": "INT96"
+			},
+			{
+				"name": "GRUPO_DOC",
+				"type": "UTF8"
+			},
+			{
+				"name": "FOLIO_ILIQUIDO",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "FOLIO_DESCONTO",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "FOLIO_LIQUIDO",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "FOLIO_IVA",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "FOLIO_DESC_PP",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "FOLIO_TOTAL",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "DOC_AUTOMATICO",
+				"type": "UTF8"
+			},
+			{
+				"name": "NUM_OBRA_FACT",
+				"type": "UTF8"
+			},
+			{
+				"name": "DIARIO_OBRA_FACT",
+				"type": "UTF8"
+			},
+			{
+				"name": "PROCESSO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO1",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO2",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO3",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO4",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO5",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO6",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO7",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO8",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO9",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO10",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO11",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO12",
+				"type": "UTF8"
+			},
+			{
+				"name": "MENSAGEM",
+				"type": "BINARY"
+			},
+			{
+				"name": "VALOR_PAGO",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "PESO_LIQUIDO",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "PESO_BRUTO",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "NVOLUMES",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "VOLUME",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "OBRA_MATRICULA",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_SECCAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESC_SECCAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "TEM_QTD_LIQ",
+				"type": "UTF8"
+			},
+			{
+				"name": "DATAHORA",
+				"type": "INT96"
+			},
+			{
+				"name": "TAXA_CUSTOS",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "VALOR_MERCADORIA",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "DESC_PP_VALOR",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "DESC_PP_P1",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "DESC_PP_P2",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "DESC_PP_P3",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "DESC_PP_IVA",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "DESC_PP_TOTAL",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "DIVISAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "PROCNEG",
+				"type": "UTF8"
+			},
+			{
+				"name": "PROCNEG_ETAPA",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_SEGMERC",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_REGIAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESC_REGIAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_CONDENTREGA",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESC_CONDENTREGA",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_APORTO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESC_APORTO",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_NAT_A",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_NAT_B",
+				"type": "UTF8"
+			},
+			{
+				"name": "IVA_INCLUIDO",
+				"type": "UTF8"
+			},
+			{
+				"name": "PERCDISP",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "TOTAL_ISENTODESCFINANC",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "OPERADOR",
+				"type": "UTF8"
+			},
+			{
+				"name": "NVIAS",
+				"type": "UTF8"
+			},
+			{
+				"name": "VALOR_RETENCAO",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "VALOR_MO",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "TAXA_RETENCAO",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "NUM_LIQUIDACAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "VEM_CRM",
+				"type": "UTF8"
+			},
+			{
+				"name": "EXPORTADO",
+				"type": "UTF8"
+			},
+			{
+				"name": "PENTI_OPERADOR",
+				"type": "UTF8"
+			},
+			{
+				"name": "PNOME_OPERADOR",
+				"type": "UTF8"
+			},
+			{
+				"name": "MOTORISTA",
+				"type": "UTF8"
+			},
+			{
+				"name": "ARM_DESTINO",
+				"type": "UTF8"
+			},
+			{
+				"name": "BLOQUEADO",
+				"type": "UTF8"
+			},
+			{
+				"name": "ISENTO_IVA",
+				"type": "UTF8"
+			},
+			{
+				"name": "DW_DOCID",
+				"type": "UTF8"
+			},
+			{
+				"name": "DW_ARQ",
+				"type": "UTF8"
+			},
+			{
+				"name": "ESTADO_LPE",
+				"type": "UTF8"
+			},
+			{
+				"name": "ID_USER_LPE",
+				"type": "UTF8"
+			},
+			{
+				"name": "NUM_LIGACAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DIARIO_CPA",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_PLANO",
+				"type": "UTF8"
+			},
+			{
+				"name": "ANO_PLANO",
+				"type": "UTF8"
+			},
+			{
+				"name": "ORDEMPROD",
+				"type": "UTF8"
+			},
+			{
+				"name": "INCOTERM",
+				"type": "UTF8"
+			},
+			{
+				"name": "DOC_CONFERENCIA",
+				"type": "UTF8"
+			},
+			{
+				"name": "GERAR_EDI",
+				"type": "UTF8"
+			},
+			{
+				"name": "DATA_ORIGINAL",
+				"type": "INT96"
+			},
+			{
+				"name": "NUM_CONTACTO",
+				"type": "UTF8"
+			},
+			{
+				"name": "POCA_CONTA2",
+				"type": "UTF8"
+			},
+			{
+				"name": "POCA_ENTI2",
+				"type": "UTF8"
+			},
+			{
+				"name": "ASSINATURA",
+				"type": "UTF8"
+			},
+			{
+				"name": "DATA_ULT_MODIFICACAO",
+				"type": "INT96"
+			},
+			{
+				"name": "DATA_CRIACAO",
+				"type": "INT96"
+			},
+			{
+				"name": "VERSAO_CHAVE",
+				"type": "UTF8"
+			},
+			{
+				"name": "DOC_ANULADO",
+				"type": "UTF8"
+			},
+			{
+				"name": "ORIGEM_DOCUMENTO",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_MOTIVO_ANULACAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "OBS_ANULACAO",
+				"type": "BINARY"
+			},
+			{
+				"name": "MOTIVO_ATRASO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESC_MAX",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "DESC_MIN",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "DESC_ESP",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "ASSINATURA_ANT",
+				"type": "UTF8"
+			},
+			{
+				"name": "TEXTO_RSA",
+				"type": "UTF8"
+			},
+			{
+				"name": "ORIGEM_PDA",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_LOCALIZACAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_ENTIDADE",
+				"type": "UTF8"
+			},
+			{
+				"name": "REFLETIR_DESCPP",
+				"type": "UTF8"
+			},
+			{
+				"name": "FACTC_MOEDA_M2",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "SERIE_MANUAL",
+				"type": "UTF8"
+			},
+			{
+				"name": "NUMDOC_MANUAL",
+				"type": "UTF8"
+			},
+			{
+				"name": "PDA_ESTADO_DOC",
+				"type": "UTF8"
+			},
+			{
+				"name": "REFERENCIA",
+				"type": "UTF8"
+			},
+			{
+				"name": "REP_LEGAL_NOME",
+				"type": "UTF8"
+			},
+			{
+				"name": "REP_LEGAL_NIF",
+				"type": "UTF8"
+			},
+			{
+				"name": "REP_LEGAL_MORADA",
+				"type": "UTF8"
+			},
+			{
+				"name": "REP_LEGAL_LOCALIDADE",
+				"type": "UTF8"
+			},
+			{
+				"name": "REP_LEGAL_CODPOSTAL",
+				"type": "UTF8"
+			},
+			{
+				"name": "REP_LEGAL_DESCPOSTAL",
+				"type": "UTF8"
+			},
+			{
+				"name": "CODIGO_INVENTARIO",
+				"type": "UTF8"
+			},
+			{
+				"name": "MOTCREDITO_COD",
+				"type": "UTF8"
+			},
+			{
+				"name": "MOTCREDITO_DES",
+				"type": "UTF8"
+			},
+			{
+				"name": "RAPEL",
+				"type": "UTF8"
+			},
+			{
+				"name": "EXPORTADO_AT",
+				"type": "UTF8"
+			},
+			{
+				"name": "AT_DOCCODEID",
+				"type": "UTF8"
+			},
+			{
+				"name": "DATA_ANULACAO",
+				"type": "INT96"
+			},
+			{
+				"name": "OPERADOR_ANULACAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "AUTOFACTURACAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "NMOEDA1",
+				"type": "UTF8"
+			},
+			{
+				"name": "NMOEDA2",
+				"type": "UTF8"
+			},
+			{
+				"name": "BLOQUEADO_CTB",
+				"type": "UTF8"
+			},
+			{
+				"name": "CODPOSTAL_DESCARGA",
+				"type": "UTF8"
+			},
+			{
+				"name": "OPORTUNIDADE_CRM",
+				"type": "UTF8"
+			},
+			{
+				"name": "DOCUMENTO_GLOBAL",
+				"type": "UTF8"
+			},
+			{
+				"name": "VALOR_GARANTIAS",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "REVISAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DATA_REVISAO",
+				"type": "INT96"
+			},
+			{
+				"name": "CONTAB_RIC",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAD_COND_PAGAMENTO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAD_PRAZO_ENTREGA",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAD_VALIDADEORC",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAD_MORADA_ENTREGA",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAD_LOCALIDADE_ENTREGA",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAD_CP_ENTREGA",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAD_CP_LOCALIDADE_ENTREGA",
+				"type": "UTF8"
+			},
+			{
+				"name": "TOTAL_IS",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "NUM_VIATURA",
+				"type": "UTF8"
+			},
+			{
+				"name": "ESTADO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO13",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO14",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO15",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO16",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO17",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO18",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO19",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO20",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO21",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO22",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO23",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAMPO24",
+				"type": "UTF8"
+			},
+			{
+				"name": "ANO_BACKUP",
+				"type": "UTF8"
+			},
+			{
+				"name": "DIARIO_BACKUP",
+				"type": "UTF8"
+			},
+			{
+				"name": "SERIE_BACKUP",
+				"type": "UTF8"
+			},
+			{
+				"name": "NUM_DOC_BACKUP",
+				"type": "UTF8"
+			},
+			{
+				"name": "IDCRM",
+				"type": "UTF8"
+			},
+			{
+				"name": "AREA_NEGOCIO",
+				"type": "UTF8"
+			},
+			{
+				"name": "MULTIBANCO_ENTIDADE",
+				"type": "UTF8"
+			},
+			{
+				"name": "MULTIBANCO_REFERENCIA",
+				"type": "UTF8"
+			},
+			{
+				"name": "MULTIBANCO_VALOR",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MULTIBANCO_REFERENCIA_PS",
+				"type": "UTF8"
+			},
+			{
+				"name": "MULTIBANCO_DATA_VALIDADE",
+				"type": "INT96"
+			},
+			{
+				"name": "TOTAL_FRANQUIAS",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "UTILIZADOR_PDA",
+				"type": "UTF8"
+			},
+			{
+				"name": "BLOQUEADO_PDA",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_ENTREGA",
+				"type": "UTF8"
+			},
+			{
+				"name": "OBS_ENTREGA",
+				"type": "UTF8"
+			},
+			{
+				"name": "AUTORIZACAO_DD",
+				"type": "UTF8"
+			},
+			{
+				"name": "TIPO_DEBITO_DIRETO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DATA_DEBITO_DIRETO",
+				"type": "INT96"
+			},
+			{
+				"name": "PESO_TRANSPORTE",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "CUSTO_TRANSPORTE",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

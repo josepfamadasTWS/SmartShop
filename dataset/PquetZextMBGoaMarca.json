@@ -1,0 +1,140 @@
+{
+	"name": "PquetZextMBGoaMarca",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DataLakeStorageParquetFiles",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Bedivar/SourcesDataLake"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "ZEXT_MB_GOA_MARCA",
+				"folderPath": "rawfiles/IngestData/ERP",
+				"fileSystem": "bedivar"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "COD_MARCA",
+				"type": "UTF8"
+			},
+			{
+				"name": "ABREVIATURA",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESCRICAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "LOGO",
+				"type": "BINARY"
+			},
+			{
+				"name": "LOCK_USER",
+				"type": "UTF8"
+			},
+			{
+				"name": "E_VIATURA",
+				"type": "UTF8"
+			},
+			{
+				"name": "ARMAZEM",
+				"type": "UTF8"
+			},
+			{
+				"name": "COR_POS",
+				"type": "UTF8"
+			},
+			{
+				"name": "GOA",
+				"type": "UTF8"
+			},
+			{
+				"name": "NUM_AUTOMATICA",
+				"type": "UTF8"
+			},
+			{
+				"name": "MARGEM1",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MARGEM2",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MARGEM3",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MARGEM4",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MARGEM5",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MARGEM6",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MARGEM_MINIMA_VENDAS",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "PORTALWEB",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_POC",
+				"type": "UTF8"
+			},
+			{
+				"name": "SERVICO_TABELADO",
+				"type": "UTF8"
+			},
+			{
+				"name": "E_EMMS",
+				"type": "UTF8"
+			},
+			{
+				"name": "POCA_CONTA",
+				"type": "UTF8"
+			},
+			{
+				"name": "POCA_ENTI",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_INTEGRACAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESCRICAO_TECDOC",
+				"type": "UTF8"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

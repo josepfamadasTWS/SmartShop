@@ -1,0 +1,9 @@
+{
+	"name": "ADFELT",
+	"location": "francecentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8218b122-c65a-48d4-9f27-fe97b643310b",
+		"tenantId": "faf0d323-242e-433e-9730-6a4eb3c490fe"
+	}
+}

@@ -1,0 +1,214 @@
+{
+	"name": "PquetZextBDAGiaArtigoStocks",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DataLakeStorageParquetFiles",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Bedivar/SourcesDataLake"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "ZEXT_BDA_GIA_ARTIGO_STOCKS",
+				"folderPath": "rawfiles/IngestData/ERP",
+				"fileSystem": "bedivar"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "CODIGO_ARM",
+				"type": "UTF8"
+			},
+			{
+				"name": "REFERENCIA",
+				"type": "UTF8"
+			},
+			{
+				"name": "CHAVE",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_COR",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_TAMANHO",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_LOTE",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_LOCALIZACAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CARACT01",
+				"type": "UTF8"
+			},
+			{
+				"name": "CARACT02",
+				"type": "UTF8"
+			},
+			{
+				"name": "CARACT03",
+				"type": "UTF8"
+			},
+			{
+				"name": "CARACT04",
+				"type": "UTF8"
+			},
+			{
+				"name": "CARACT05",
+				"type": "UTF8"
+			},
+			{
+				"name": "CARACT06",
+				"type": "UTF8"
+			},
+			{
+				"name": "CARACT07",
+				"type": "UTF8"
+			},
+			{
+				"name": "CARACT08",
+				"type": "UTF8"
+			},
+			{
+				"name": "CARACT09",
+				"type": "UTF8"
+			},
+			{
+				"name": "CARACT10",
+				"type": "UTF8"
+			},
+			{
+				"name": "STOCK_ACTUAL",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "STOCK_ACTUAL2",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MERCADORIAS_TRANSITO",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MERCADORIAS_TRANSITO2",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MERCADORIAS_TRANSITO_FOR",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MERCADORIAS_TRANSITO2_FOR",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "CONSIGNACOES",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "CONSIGNACOES2",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "CONSIGNACOES_FOR",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "CONSIGNACOES2_FOR",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "QTD_ENC_CLIENTE",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "QTD_ENC_CLIENTE2",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "QTD_ENC_FORN",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "QTD_ENC_FORN2",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "OBRAS_EM_CURSO",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "OBRAS_EM_CURSO2",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "NECESSIDADES",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "NECESSIDADES2",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "TRANSPORTE_ACTIVOS",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "TRANSPORTE_ACTIVOS2",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

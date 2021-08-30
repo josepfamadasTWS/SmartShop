@@ -1,0 +1,57 @@
+{
+	"name": "CSVDimDocumentTypes",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DataLakeStorageParquetFiles",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Bedivar/SourcesDataLake"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "DocumentTypes.csv",
+				"folderPath": "rawfiles/IngestData/CSV",
+				"fileSystem": "bedivar"
+			},
+			"columnDelimiter": ";",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "KeyCompany",
+				"type": "String"
+			},
+			{
+				"name": "DocType",
+				"type": "String"
+			},
+			{
+				"name": "DocType2",
+				"type": "String"
+			},
+			{
+				"name": "MoveType",
+				"type": "String"
+			},
+			{
+				"name": "DocumentClass",
+				"type": "String"
+			},
+			{
+				"name": "SaleMultiplier",
+				"type": "String"
+			},
+			{
+				"name": "PurchaseMultiplier",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

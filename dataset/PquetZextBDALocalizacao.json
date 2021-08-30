@@ -1,0 +1,122 @@
+{
+	"name": "PquetZextBDALocalizacao",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DataLakeStorageParquetFiles",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Bedivar/SourcesDataLake"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "ZEXT_BDA_LOCALIZACAO",
+				"folderPath": "rawfiles/IngestData/ERP",
+				"fileSystem": "bedivar"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "COD_LOCALIZACAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESCRICAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_PAI",
+				"type": "UTF8"
+			},
+			{
+				"name": "ARMAZEM",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_POC",
+				"type": "UTF8"
+			},
+			{
+				"name": "LOCK_USER",
+				"type": "UTF8"
+			},
+			{
+				"name": "AREA",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "VOLUME",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "TEM_DET",
+				"type": "UTF8"
+			},
+			{
+				"name": "E_ARMAZEM",
+				"type": "UTF8"
+			},
+			{
+				"name": "PORTALWEB",
+				"type": "UTF8"
+			},
+			{
+				"name": "E_EMMS",
+				"type": "UTF8"
+			},
+			{
+				"name": "LOCAL_CARGA",
+				"type": "UTF8"
+			},
+			{
+				"name": "MORADA",
+				"type": "UTF8"
+			},
+			{
+				"name": "LOCALIDADE",
+				"type": "UTF8"
+			},
+			{
+				"name": "PAIS_COD",
+				"type": "UTF8"
+			},
+			{
+				"name": "CPOS_COD",
+				"type": "UTF8"
+			},
+			{
+				"name": "CPOS_DESC",
+				"type": "UTF8"
+			},
+			{
+				"name": "EMAIL",
+				"type": "UTF8"
+			},
+			{
+				"name": "IMAGEM",
+				"type": "BINARY"
+			},
+			{
+				"name": "INVENTARIO",
+				"type": "UTF8"
+			},
+			{
+				"name": "POCA_CONTA",
+				"type": "UTF8"
+			},
+			{
+				"name": "POCA_ENTI",
+				"type": "UTF8"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

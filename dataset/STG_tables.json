@@ -1,0 +1,29 @@
+{
+	"name": "STG_tables",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseDestinationDB",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"TableName": {
+				"type": "string",
+				"defaultValue": "ADF"
+			}
+		},
+		"folder": {
+			"name": "tutorials"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": {
+				"value": "@dataset().TableName",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,60 @@
+{
+	"name": "JsonCwTablesFromDatalake",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Bedivar/Trip"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "oracletablesSourcesEnd.json",
+				"folderPath": "rawfiles/Configfiles",
+				"fileSystem": "bedivar"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"items": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"IdCompany": {
+								"type": "integer"
+							},
+							"Company": {
+								"type": "string"
+							},
+							"Tablename": {
+								"type": "string"
+							},
+							"Datasource": {
+								"type": "string"
+							},
+							"MaxLastUpdateDate": {
+								"type": "string"
+							},
+							"Enable": {
+								"type": "integer"
+							},
+							"IncrementalFullLoad": {
+								"type": "integer"
+							},
+							"num_rows": {
+								"type": "integer"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

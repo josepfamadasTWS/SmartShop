@@ -1,0 +1,126 @@
+{
+	"name": "PquetZextDSTipoArtigo",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DataLakeStorageParquetFiles",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Bedivar/SourcesDataLake"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "ZEXT_DS_TIPO_ARTIGO",
+				"folderPath": "rawfiles/IngestData/ERP",
+				"fileSystem": "bedivar"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "COD_TIPO_ART",
+				"type": "UTF8"
+			},
+			{
+				"name": "DESCRICAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "MARGEM1",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MARGEM2",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MARGEM3",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MARGEM4",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MARGEM5",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MARGEM6",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "MARGEMP",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "IMAGEM",
+				"type": "BINARY"
+			},
+			{
+				"name": "COMISSIONAVEL",
+				"type": "UTF8"
+			},
+			{
+				"name": "LOCK_USER",
+				"type": "UTF8"
+			},
+			{
+				"name": "COR_POS",
+				"type": "UTF8"
+			},
+			{
+				"name": "ARMAZEM",
+				"type": "UTF8"
+			},
+			{
+				"name": "MARGEM_MINIMA_VENDAS",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "PORTALWEB",
+				"type": "UTF8"
+			},
+			{
+				"name": "ORDEM",
+				"type": "UTF8"
+			},
+			{
+				"name": "CAD_ONE_RECORD_ONLY",
+				"type": "UTF8"
+			},
+			{
+				"name": "REPL_SYNC",
+				"type": "UTF8"
+			},
+			{
+				"name": "REPL_HASH",
+				"type": "UTF8"
+			},
+			{
+				"name": "COD_POC",
+				"type": "UTF8"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

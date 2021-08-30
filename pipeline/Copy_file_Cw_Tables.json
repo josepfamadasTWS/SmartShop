@@ -1,0 +1,151 @@
+{
+	"name": "Copy_file_Cw_Tables",
+	"properties": {
+		"activities": [
+			{
+				"name": "CopyFilesFromDataLake",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "JsonSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "JsonReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "['IdCompany']"
+								},
+								"sink": {
+									"name": "IdCompany",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "['Company']"
+								},
+								"sink": {
+									"name": "Company",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Tablename']"
+								},
+								"sink": {
+									"name": "Tablename",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Datasource']"
+								},
+								"sink": {
+									"name": "Datasource",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['MaxLastUpdateDate']"
+								},
+								"sink": {
+									"name": "MaxLastUpdateDate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"path": "['Enable']"
+								},
+								"sink": {
+									"name": "Enable",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "['IncrementalFullLoad']"
+								},
+								"sink": {
+									"name": "IncrementalFullLoad",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "['Watermarktable']"
+								},
+								"sink": {
+									"name": "Watermarktable",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"path": "['WatermarktableBefore']"
+								},
+								"sink": {
+									"name": "WatermarktableBefore",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"path": "['num_rows']"
+								},
+								"sink": {
+									"name": "NumRows",
+									"type": "Int32"
+								}
+							}
+						],
+						"collectionReference": "$['items']",
+						"mapComplexValuesToString": true
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "JsonCwTablesFromDatalake",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSqlTablesCnf",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "4ENTITIES/BEDIVAR/Trip"
+		},
+		"annotations": [],
+		"lastPublishTime": "2021-08-30T08:05:45Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
